@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        //declaracion
+
+        bonito(7, "*");
+        bonito("hola", "-");
+
+        console.log("*");
+        console.log("*hola*");
+        console.log("*");
+
+
+
+        function bonito(arg, estilo) {
+
+            console.log(estilo + arg + estilo);
+        }
+
+
+        var formateador1 = function (texto) {
+
+            console.log("*");
+            console.log("*" + texto + "*");
+            console.log("*");
+
+        }
+
+        var formateador2 = function (texto) {
+
+            console.log("-");
+            console.log("*" + texto + "*");
+            console.log("-");
+
+        }
+        //invocacion a una funcion de orden superior
+        bonito2("hola", formateador1);
+        bonito2("hola", formateador2);
+
+
+        bonito2 ("hola3", function(a) {
+
+            console.log("----"+a+"----");
+        });
+
+        //es la funcion $ que recibe otra funcion como parametro que es la funcion
+        //de arranque del programa
+        $(function() {
+
+
+        })
+
+
+
+
+
+
+
+        //high order funcion
+        function bonito2(arg, f) {
+
+            f(arg);
+
+        }
+
+
+
+        /*
+        $(function() {
+
+            alert("hola");
+        })
+        */
+    </script>
+</head>
+
+</html>

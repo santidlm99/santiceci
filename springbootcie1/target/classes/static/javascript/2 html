@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      
+
+      // la pagina esta cargada
+        $(function() {
+
+            //funcion de orden superior que recibe una funcion como parametro
+            $("#boton1").click(function() {
+                alert("has pulsado");
+                $("body").append("<p>hola has pulsado</p>");
+            })
+        })
+
+
+    </script>
+</head>
+<body>
+    <input type="button" id="boton1" value="pulsame"/>
+</body>
+
+</html>
